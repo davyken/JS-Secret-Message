@@ -15,7 +15,7 @@ form.addEventListener('submit', (e) => {
     normText.textContent = 'Error: Input 50 chars min'
     normText.style.color = 'red'
   } else {
-    const normalized1 = sentence.replace(/[.,"'<>?"" """[ #!$%&;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, "")
+    const normalized1 = sentence.replace(/[.,''<>?'' '''[ #!$%&;:{}=\-_`~()]/g, '').replace(/\s{2,}/g, '')
     const normalized = normalized1.toLowerCase()
     let arrOfNormalized = normalized.match(/.{1,8}/g)
     displayArr(arrOfNormalized, normText)
