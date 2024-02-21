@@ -17,11 +17,11 @@ form.addEventListener('submit', (e) => {
   } else {
     const normalized1 = sentence.replace(/[.,''<>?'' '''[ #!$%&;:{}=\-_`~()]/g, '').replace(/\s{2,}/g, '')
     const normalized = normalized1.toLowerCase()
-    let arrOfNormalized = normalized.match(/.{1,8}/g)
+    const arrOfNormalized = normalized.match(/.{1,8}/g)
     displayArr(arrOfNormalized, normText)
 
     encodeButton.addEventListener('click', () => { //(https://github.com/davyken/JS-Secret-Handshake/pull/1)
-      let encodedArr = []
+      const encodedArr = []
       for (let i = 0; i < arrOfNormalized.length; i++) {
         for (let j = 0; j < arrOfNormalized.length; j++) {
           encodedArr.push(arrOfNormalized[j][i])
@@ -30,7 +30,7 @@ form.addEventListener('submit', (e) => {
       const encodedString1 = String(encodedArr)
       const encodedString = encodedString1.replaceAll(',', '')
       enChunks.textContent = encodedString
-      const n = arrOfNormalized.length
+      // const n = arrOfNormalized.length
       const arrOfEncoded = encodedString.match(/.{1,6}/g)
       displayArr(arrOfEncoded, enMessage)
     })
