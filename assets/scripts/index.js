@@ -20,7 +20,7 @@ form.addEventListener('submit', (e) => {
     const arrOfNormalized = normalized.match(/.{1,8}/g)
     displayArr(arrOfNormalized, normText)
 
-    encodeButton.addEventListener('click', () => {
+    encodeButton.addEventListener('click', () => { 
       const encodedArr = []
       for (let i = 0; i < arrOfNormalized.length; i++) {
         for (let j = 0; j < arrOfNormalized.length; j++) {
