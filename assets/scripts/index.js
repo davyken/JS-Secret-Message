@@ -1,14 +1,14 @@
-let form = document.querySelector('form')
-let normText = document.querySelector('#nt')
-let enChunks = document.querySelector('#ec')
-let enMessage = document.querySelector('#em')
-let encodeButton = document.querySelector('#encode')
+const form = document.querySelector('form')
+const normText = document.querySelector('#nt')
+const enChunks = document.querySelector('#ec')
+const enMessage = document.querySelector('#em')
+const encodeButton = document.querySelector('#encode')
 
 form.addEventListener('submit', (e) => {
   e.preventDefault()
   normText.textContent = ''
   normText.style.color = 'white'
-  let sentence = e.target.sentenceI.value
+  const sentence = e.target.sentenceI.value
   console.log(sentence.length)
   if (sentence.length < 50) {
     e.target.sentenceI.placeholder = '50characters Min'
@@ -20,7 +20,7 @@ form.addEventListener('submit', (e) => {
     const arrOfNormalized = normalized.match(/.{1,8}/g)
     displayArr(arrOfNormalized, normText)
 
-    encodeButton.addEventListener('click', () => { //(https://github.com/davyken/JS-Secret-Handshake/pull/1)
+    encodeButton.addEventListener('click', () => { 
       const encodedArr = []
       for (let i = 0; i < arrOfNormalized.length; i++) {
         for (let j = 0; j < arrOfNormalized.length; j++) {
