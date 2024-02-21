@@ -27,17 +27,17 @@ form.addEventListener('submit', (e) => {
           encodedArr.push(arrOfNormalized[j][i])
         }
       }
-      let encodedString1 = String(encodedArr)
-      let encodedString = encodedString1.replaceAll(',', '')
+      const encodedString1 = String(encodedArr)
+      const encodedString = encodedString1.replaceAll(',', '')
       enChunks.textContent = encodedString
-      let n = arrOfNormalized.length
-      let arrOfEncoded = encodedString.match(/.{1,6}/g)
+      const n = arrOfNormalized.length
+      const arrOfEncoded = encodedString.match(/.{1,6}/g)
       displayArr(arrOfEncoded, enMessage)
     })
   }
 })
 
-function displayArr(arr, mode) {
+function displayArr (arr, mode) {
   for (let i = 0; i < arr.length; i++) {
     mode.innerHTML += '"' + arr[i] + '"' + '<br>'
   }
