@@ -3,7 +3,6 @@
   padding: 0;
   color: white;
   font-size: 20px;
-  font-family: 'Lucida Sans Unicode';
 }
 
 body {
@@ -63,13 +62,13 @@ body {
 }
 
 button {
-  background: rgb(26, 21, 44);
+  background: #1a152c;
   border: none;
   border-radius: 20px;
 }
 
 button:hover {
-  background: rgb(64, 55, 97);
+  background: #403761;
 }
 
 legend {
@@ -85,10 +84,10 @@ legend {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.158);
+  background: #ffffff28;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(0, 0, 0);
+  background: #000000;
 }
